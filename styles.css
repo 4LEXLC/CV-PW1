@@ -1,180 +1,147 @@
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(-20px); }
-to { opacity: 1; transform: translateY(0); }
-}
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#c3d5e7;
-color:#333;
-line-height:1.6;
-padding:20px;
-text-align: justify;
-animation: fadeIn 1s ease-in-out;
+  background:#c3d5e7;
+  color:#333;
+  line-height:1.6;
+  padding:20px;
+  text-align: justify;
 }
 
 .main{
-max-width:1000px;
-margin:auto;
+  max-width:1000px;
+  margin:auto;
 }
 
 .header{
-background:#1f2937;
-color:white;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
-animation: fadeIn 1s ease-in-out;
+  background:#1f2937;
+  color:white;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
 }
 
 .header__container{
-display:flex;
-align-items:center;
-gap:20px;
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 .header__photo{
-width:120px;
-height:120px;
-object-fit:cover;
-border-radius:50%;
-border:4px solid white;
-transition: transform 0.3s ease;
-}
-
-.header__photo:hover{
-transform: scale(1.05);
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid white;
 }
 
 .header__name{
-font-size:28px;
+  font-size:28px;
 }
 
 .header__role{
-opacity:0.9;
+  opacity:0.9;
 }
 
 section{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 2px 6px rgba(0,0,0,0.08);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-animation: fadeIn 1s ease-in-out;
-}
-
-section:hover{
-transform: translateY(-4px);
-box-shadow:0 6px 14px rgba(0,0,0,0.12);
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:10px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
 }
 
 .section__title{
-margin-bottom:10px;
-color:#1f2937;
+  margin-bottom:10px;
+  color:#1f2937;
 }
 
 .education__item,
 .experience__item{
-margin-bottom:10px;
+  margin-bottom:10px;
 }
 
 .skills__list{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:10px;
-list-style:none;
-margin-top:10px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:10px;
+  list-style:none;
+  margin-top:10px;
 }
 
 .skills__item{
-background:#e5e7eb;
-padding:8px;
-border-radius:6px;
-text-align:center;
-transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.skills__item:hover{
-background:#d1d5db;
-transform: scale(1.05);
+  background:#e5e7eb;
+  padding:8px;
+  border-radius:6px;
+  text-align:center;
 }
 
 .projects__grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-margin-top:10px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  margin-top:10px;
 }
 
 .project{
-background:#f9fafb;
-padding:15px;
-border-radius:8px;
-border:1px solid #e5e7eb;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover{
-transform: translateY(-3px);
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  background:#f9fafb;
+  padding:15px;
+  border-radius:8px;
+  border:1px solid #e5e7eb;
 }
 
 .footer{
-text-align:center;
-margin-top:20px;
-color:#555;
-font-size:14px;
+  text-align:center;
+  margin-top:20px;
+  color:#555;
+  font-size:14px;
 }
 
 /* RESPONSIVE */
 /* Tablets */
 @media (max-width:768px){
 
-.header__container{
-flex-direction:column;
-text-align:center;
-}
+  .header__container{
+    flex-direction:column;
+    text-align:center;
+  }
 
-.header__photo{
-width:100px;
-height:100px;
-}
+  .header__photo{
+    width:100px;
+    height:100px;
+  }
 
-.header__name{
-font-size:24px;
-}
+  .header__name{
+    font-size:24px;
+  }
 
 }
 
 /* Celulares */
 @media (max-width:480px){
+  body{
+    padding:10px;
+  }
 
-body{
-padding:10px;
-}
+  .header{
+    padding:15px;
+  }
 
-.header{
-padding:15px;
-}
+  section{
+    padding:15px;
+  }
 
-section{
-padding:15px;
-}
+  .header__name{
+    font-size:20px;
+  }
 
-.header__name{
-font-size:20px;
-}
-
-.skills__list{
-grid-template-columns:1fr 1fr;
-}
-
+  .skills__list{
+    grid-template-columns:1fr 1fr;
+  }
 }
