@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(-20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
 /* Reset básico */
 *{
 margin:0;
@@ -7,27 +12,28 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#f4f6f8;
+background:#c3d5e7;
 color:#333;
 line-height:1.6;
 padding:20px;
+text-align: justify;
+animation: fadeIn 1s ease-in-out;
 }
 
 /* CONTENEDOR GENERAL */
-
 .main{
 max-width:1000px;
 margin:auto;
 }
 
 /* HEADER */
-
 .header{
 background:#1f2937;
 color:white;
 padding:20px;
 border-radius:10px;
 margin-bottom:20px;
+animation: fadeIn 1s ease-in-out;
 }
 
 .header__container{
@@ -43,6 +49,11 @@ height:120px;
 object-fit:cover;
 border-radius:50%;
 border:4px solid white;
+transition: transform 0.3s ease;
+}
+
+.header__photo:hover{
+transform: scale(1.05);
 }
 
 .header__name{
@@ -54,13 +65,19 @@ opacity:0.9;
 }
 
 /* SECCIONES */
-
 section{
 background:white;
 padding:20px;
 margin-bottom:20px;
 border-radius:10px;
 box-shadow:0 2px 6px rgba(0,0,0,0.08);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+animation: fadeIn 1s ease-in-out;
+}
+
+section:hover{
+transform: translateY(-4px);
+box-shadow:0 6px 14px rgba(0,0,0,0.12);
 }
 
 .section__title{
@@ -69,14 +86,12 @@ color:#1f2937;
 }
 
 /* EDUCATION Y EXPERIENCE */
-
 .education__item,
 .experience__item{
 margin-bottom:10px;
 }
 
 /* SKILLS */
-
 .skills__list{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
@@ -90,10 +105,15 @@ background:#e5e7eb;
 padding:8px;
 border-radius:6px;
 text-align:center;
+transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skills__item:hover{
+background:#d1d5db;
+transform: scale(1.05);
 }
 
 /* PROYECTOS */
-
 .projects__grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -106,10 +126,15 @@ background:#f9fafb;
 padding:15px;
 border-radius:8px;
 border:1px solid #e5e7eb;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover{
+transform: translateY(-3px);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
-
 .footer{
 text-align:center;
 margin-top:20px;
